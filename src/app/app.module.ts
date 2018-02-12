@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { MusicalsComponent } from './musicals/musicals.component';
 import { MusicalDetailComponent } from './musical-detail/musical-detail.component';
+import { MusicalService } from './musical.service';
 
 
 @NgModule({
@@ -18,7 +19,10 @@ import { MusicalDetailComponent } from './musical-detail/musical-detail.componen
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    MusicalService,
+    /* . . . */
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

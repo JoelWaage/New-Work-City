@@ -1,0 +1,13 @@
+<div>
+
+  <ul class="musicals">
+    <li *ngFor="let musical of musicals">
+      <span class="poster">{{musical.id}}. </span>{{musical.title}}
+    </li>
+  </ul>
+
+  <label>
+    New Show:
+    <input placeholder="name">
+  </label>
+</div>

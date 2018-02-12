@@ -1,13 +1,21 @@
 <div>
 
   <ul class="musicals">
-    <li *ngFor="let musical of musicals">
+    <li *ngFor="let musical of musicals"
+    [class.selected]="musical === selectMusical"
+    (click)="onSelect(musical)">
       <span class="poster">{{musical.id}}. </span>{{musical.title}}
     </li>
   </ul>
 
-  <label>
-    New Show:
-    <input placeholder="name">
-  </label>
+  <div *ngIf="selectedMusical">
+    <h2>{{selectedMusical.title | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedMusical.id}}</div>
+    <div>
+      <label>
+        New Show:
+        <input [(ngModel)]="selectedMusical.title" placeholder="name">
+      </label>
+    </div>
+  </div>
 </div>

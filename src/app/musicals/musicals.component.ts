@@ -16,4 +16,10 @@ export class MusicalsComponent implements OnInit {
   ngOnInit() {
   }
 
+  selectedMusical: Musical;
+
+  onSelect(musical: Musical): void {
+    this.selectedMusical = musical;
+  }
+
 }

@@ -9,6 +9,7 @@ import { MusicalDetailComponent } from './musical-detail/musical-detail.componen
 import { MusicalService } from './musical.service';
 import { MessageService } from './message.service';
 import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MessagesComponent } from './messages/messages.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [
     MusicalService,

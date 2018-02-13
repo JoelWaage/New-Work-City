@@ -7,13 +7,16 @@ import { AppComponent } from './app.component';
 import { MusicalsComponent } from './musicals/musicals.component';
 import { MusicalDetailComponent } from './musical-detail/musical-detail.component';
 import { MusicalService } from './musical.service';
+import { MessageService } from './message.service';
+import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MusicalsComponent,
-    MusicalDetailComponent
+    MusicalDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,7 @@ import { MusicalService } from './musical.service';
   ],
   providers: [
     MusicalService,
-    /* . . . */
+    MessageService,
   ],
   bootstrap: [AppComponent]
 })

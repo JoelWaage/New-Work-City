@@ -28,6 +28,10 @@ export class MusicalDetailComponent implements OnInit {
       .subscribe(musical => this.musical = musical);
   }
 
+  goBack(): void {
+    this.location.back();
+  }
+
   @Input() musical: Musical
 
 }

@@ -1,11 +1,9 @@
 <div>
   <ul class="musicals">
-    <li *ngFor="let musical of musicals"
-    [class.selected]="musical === selectMusical"
-    (click)="onSelect(musical)">
-      <span class="poster">{{musical.id}}. </span>{{musical.title}}
+    <li *ngFor="let musical of musicals">
+      <a routerLink="/detail/{{musical.id}}">
+        <span class="poster">{{musical.id}}. </span>{{musical.title}}
+      </a>
     </li>
   </ul>
 </div>
-
-<app-musical-detail [musical]="selectedMusical"></app-musical-detail>
